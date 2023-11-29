@@ -1,0 +1,130 @@
+.temperament {
+  background: #dbdbde;
+
+  &__text {
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 52px;
+    align-items: center;
+    gap: 5px;
+    > .temperament__text-item {
+      margin-left: 180px;
+      width: 3500px;
+    }
+  }
+
+  &__text-body {
+    width: 3500px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .temperament__text-item:nth-child(1) {
+      margin-left: -40px;
+    }
+    .temperament__text-item:nth-child(2) {
+      margin-left: 190px;
+    }
+    .temperament__text-item:nth-child(3) {
+      margin-left: -5px;
+    }
+  }
+
+  &__text-node {
+    display: inline-block;
+    color: rgba(236, 236, 236, 0.15);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 10px;
+    &.active {
+      color: #fff;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 1414px;
+    }
+  }
+
+  &__bg {
+    background: linear-gradient(
+      180deg,
+      #20261f 12.09%,
+      rgba(241, 241, 241, 0) 55.88%
+    );
+  }
+  @media (min-width: $desktopSizeM) {
+    &__text-node {
+      font-size: 34px;
+    }
+    &__text-body {
+      width: 6700px;
+      gap: 10px;
+      .temperament__text-item:nth-child(1) {
+        margin-left: 70px;
+      }
+      .temperament__text-item:nth-child(2) {
+        margin-left: 365px;
+      }
+      .temperament__text-item:nth-child(3) {
+        margin-left: 455px;
+      }
+    }
+    &__text {
+      margin-bottom: 140px;
+      gap: 10px;
+      > .temperament__text-item {
+        align-self: start;
+        width: 6700px;
+        margin-left: 80px;
+      }
+    }
+
+    &__bg {
+      background: linear-gradient(
+        180deg,
+        #20261f 7.09%,
+        rgba(241, 241, 241, 0) 61.88%
+      );
+    }
+  }
+
+  @media (min-width: $desktopSizeL) {
+    &__text-body {
+      .temperament__text-item:nth-child(1) {
+        margin-left: 280px;
+      }
+      .temperament__text-item:nth-child(2) {
+        margin-left: 205px;
+      }
+      .temperament__text-item:nth-child(3) {
+        margin-left: -125px;
+      }
+    }
+  }
+
+  @media (min-width: $desktopSizeXL) {
+    &__text-body {
+      .temperament__text-item:nth-child(1) {
+        margin-left: 200px;
+      }
+      .temperament__text-item:nth-child(2) {
+        margin-left: 525px;
+      }
+      .temperament__text-item:nth-child(3) {
+        margin-left: 205px;
+      }
+    }
+  }
+}
+.container {
+}

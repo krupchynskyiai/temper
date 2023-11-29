@@ -1,0 +1,50 @@
+.d-none {
+  display: none !important;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  touch-action: none;
+}
+
+.d-l {
+  display: none;
+}
+
+.zoom-hover {
+  transition: transform $transition;
+}
+@media (any-hover: hover) {
+  .zoom-hover {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+@media (min-width: $tabletSize) {
+}
+
+@media (min-width: $desktopSizeM) {
+  .d-l {
+    display: block;
+  }
+
+  .d-s {
+    display: none;
+  }
+}
+
+@media (min-width: $desktopSizeL) {
+}
+
+@media (min-width: $desktopSizeXL) {
+}

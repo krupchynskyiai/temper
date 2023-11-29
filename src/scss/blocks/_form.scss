@@ -1,0 +1,367 @@
+.form {
+  padding: 38px 0 94px 0;
+  color: var(--black);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  &__animation-wrapper {
+    position: absolute;
+    z-index: -1;
+    white-space: nowrap;
+  }
+
+  &__animation-wrapper-brown {
+    filter: drop-shadow(-9px 0px 8px rgba(0, 0, 0, 0.1));
+    background: #a8573e;
+    padding: 10px 0;
+    transform: rotate(48deg);
+    transform-origin: 30%;
+    bottom: 70px;
+    left: -280px;
+    width: 1093.12px;
+    .form__animation-body {
+      animation: moove 20s linear infinite;
+    }
+  }
+  &__animation-body {
+    display: inline-block;
+  }
+
+  &__animation-node {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  &__container {
+    max-width: 886px;
+  }
+
+  &__content {
+    &__body {
+    }
+    .form__sucess-body {
+      display: none;
+    }
+    .form__success-body-title {
+      color: var(--black);
+      text-align: center;
+      font-family: var(--font-accent);
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+    }
+    .form__success-body-desc {
+      color: #4f4f4f;
+      text-align: center;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &.success {
+      .form__body {
+        display: none;
+      }
+
+      .form__sucess-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 143px 0;
+      }
+    }
+  }
+
+  &__title {
+    font-family: var(--font-accent);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    span:last-child {
+      font-size: 22px;
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 37px;
+  }
+
+  &__form {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    &.sending {
+      .form__submitBtn {
+        position: relative;
+        pointer-events: none;
+        touch-action: none;
+        cursor: auto;
+        &:before {
+          z-index: 1;
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+      .loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 28px;
+        height: 28px;
+        border: 5px solid #fff;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__field {
+  }
+
+  &__input {
+    width: 100%;
+    background: var(--input-bg);
+    padding: 13px 18px;
+    border: 1px solid transparent;
+    &::placeholder {
+      color: inherit;
+    }
+    &.empty,
+    &.error {
+      border-color: red;
+    }
+  }
+
+  &__button {
+    padding: 13px 50px;
+    background: rgba(168, 87, 62, 0.8);
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    .loader {
+      display: none;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: rgba(168, 87, 62, 1);
+      }
+    }
+  }
+
+  .ts-wrapper.single .ts-control,
+  .ts-control,
+  .ts-wrapper.single.input-active .ts-control {
+    background: var(--input-bg);
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 0;
+    font-size: inherit;
+    padding: 11px 18px;
+    box-shadow: none;
+  }
+  .ts-wrapper.single .ts-control,
+  .ts-dropdown.single {
+    border-radius: 0;
+    font-size: inherit;
+    background: var(--input-bg);
+    color: #fff;
+    border: 1px solid transparent;
+    margin-top: 0;
+  }
+  .ts-dropdown .active {
+    color: #fff;
+    background: rgba(168, 87, 62, 0.65);
+  }
+  .ts-wrapper.single .ts-control::after {
+    border-color: #fff transparent transparent transparent;
+  }
+
+  .ts-wrapper.single.dropdown-active .ts-control::after {
+    border-color: transparent transparent #fff transparent;
+  }
+
+  .ts-control input {
+    &,
+    &::placeholder {
+      font-size: inherit;
+      color: #fff;
+    }
+  }
+  .ts-dropdown [data-selectable].option {
+    text-align: left;
+    font-size: inherit;
+    padding: 4px 18px;
+  }
+
+  .empty + .ts-wrapper.single .ts-control {
+    border: 1px solid red;
+  }
+
+  @media (min-width: $desktopSizeM) {
+    & {
+      padding: 134px 0 213px 0;
+    }
+    &__animation-wrapper-white {
+      z-index: 0;
+      transform: rotate(-34deg);
+      left: -120px;
+      top: 90px;
+      padding: 20px 100px;
+      filter: drop-shadow(0px 20px 4px rgba(85, 85, 85, 0.25));
+      background: #fff;
+    }
+
+    &__animation-wrapper-green {
+      background: #20261f;
+      filter: drop-shadow(29px 12px 4px rgba(0, 0, 0, 0.2));
+      bottom: 190px;
+      right: -460px;
+      transform: rotate(-50deg);
+      padding: 20px 100px;
+      @media (min-width: $desktopSizeL) {
+      }
+
+      @media (min-width: $desktopSizeXL) {
+        bottom: 190px;
+        right: -360px;
+      }
+    }
+    &__animation-wrapper-brown {
+      filter: drop-shadow(23px 10px 8px rgba(0, 0, 0, 0.2));
+      bottom: 0px;
+      left: -550px;
+      width: 2973.12px;
+      .form__animation-body {
+        animation: moove 20s linear infinite;
+      }
+      @media (min-width: $desktopSizeL) {
+        bottom: 50px;
+        left: -480px;
+      }
+
+      @media (min-width: $desktopSizeXL) {
+        bottom: 100px;
+        left: -290px;
+      }
+    }
+    &__animation-body {
+    }
+
+    &__animation-node {
+      margin-right: 30px;
+    }
+    &__animation-wrapper {
+    }
+
+    &__animation-wrapper-white {
+    }
+
+    &__animation-body {
+    }
+
+    &__container {
+    }
+
+    &__content {
+    }
+
+    &__title {
+      font-size: 48px;
+      span:last-child {
+        font-size: 28px;
+      }
+    }
+
+    &__desc {
+      font-size: 22px;
+    }
+
+    &__form {
+      font-size: 22px;
+      flex-flow: row wrap;
+      gap: 22px;
+    }
+
+    &__field {
+      flex-basis: 100%;
+      &:first-child,
+      &:nth-child(2) {
+        flex-basis: calc(50% - 11px);
+      }
+    }
+
+    &__input {
+      padding: 15px 26px;
+    }
+
+    &__button {
+    }
+    .ts-dropdown [data-selectable].option {
+      font-size: 16px;
+      padding: 10px 32px;
+    }
+    .ts-wrapper.single .ts-control,
+    .ts-control,
+    .ts-wrapper.single.input-active .ts-control {
+      padding: 15px 26px;
+    }
+    .ts-wrapper div {
+      line-height: 1;
+    }
+    &__button {
+      margin: auto;
+      font-size: 22px;
+      padding: 15px 55px;
+    }
+  }
+
+  @media (min-width: $desktopSizeL) {
+  }
+
+  @media (min-width: $desktopSizeXL) {
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes moove {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}

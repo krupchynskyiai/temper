@@ -1,0 +1,144 @@
+.advantages {
+  padding: 52px 0 59px 0;
+  color: var(--white);
+  background: #20261f;
+  font-family: var(--font-accent);
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    border-bottom: 1px solid var(--white);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+    align-items: center;
+  }
+
+  &__li {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__li-title {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  &__li-index {
+    display: none;
+  }
+
+  &__li-desc {
+    color: #9d8067;
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 106.399%; /* 17.024px */
+  }
+
+  &__list-divider {
+    width: 20%;
+    height: 2px;
+    background: var(--white);
+  }
+
+  @media (min-width: $tabletSize) {
+  }
+
+  @media (min-width: $desktopSizeM) {
+    & {
+      padding-top: 114px;
+      padding-bottom: 97px;
+    }
+    &__content {
+      gap: 117px;
+    }
+
+    &__title {
+      font-size: 44px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+    }
+
+    &__list {
+      gap: 18px;
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    &__li {
+      padding: 70px 0;
+      text-align: left;
+    }
+
+    &__li-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+    }
+
+    &__li-index {
+      display: block;
+      font-family: var(--font-main);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 5px;
+    }
+
+    &__li-desc {
+      font-size: 15px;
+    }
+
+    &__list-divider {
+      flex-shrink: 0;
+      width: 2px;
+      height: unset;
+    }
+  }
+
+  @media (min-width: $desktopSizeL) {
+    &__li-desc {
+    }
+    &__list {
+      gap: 24px;
+    }
+    &__li-title {
+      gap: 18px;
+    }
+  }
+
+  @media (min-width: $desktopSizeXL) {
+    &__li-title {
+      font-size: 44px;
+    }
+    &__li-desc {
+      font-size: 20px;
+    }
+    &__list {
+      gap: 32px;
+    }
+  }
+}

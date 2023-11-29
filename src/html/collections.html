@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	@@include('blocks/meta.html')
+	@@include('blocks/fonts.html')
+</head>
+
+<body>
+	@@include('blocks/svgSprite.html')
+
+	@@include('blocks/header.html', {
+	active: 'collections',
+	})
+	<div class="main">
+		@@include('blocks/collections.html')
+
+		@@include('blocks/form.html')
+
+	</div>
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+.collections {
+  padding-top: 152px;
+  padding-bottom: 50px;
+  color: var(--black);
+  &__content {
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-family: var(--font-accent);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__nav-li {
+  }
+
+  &__nav-button {
+    color: #ababab;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    transition: color $transition;
+
+    &.active {
+      color: var(--black);
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -25px;
+        top: 4px;
+        width: 17px;
+        height: 8px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg width='45' height='16' viewBox='0 0 45 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM44.7071 8.70711C45.0976 8.31658 45.0976 7.68342 44.7071 7.29289L38.3431 0.928932C37.9526 0.538408 37.3195 0.538408 36.9289 0.928932C36.5384 1.31946 36.5384 1.95262 36.9289 2.34315L42.5858 8L36.9289 13.6569C36.5384 14.0474 36.5384 14.6805 36.9289 15.0711C37.3195 15.4616 37.9526 15.4616 38.3431 15.0711L44.7071 8.70711ZM1 9H44V7H1V9Z' fill='black'/%3E%3C/svg%3E%0A");
+      }
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--black);
+      }
+    }
+  }
+
+  &__list-container {
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 35px;
+    &:not(.ative) {
+      display: none;
+    }
+    &.active {
+      display: flex;
+    }
+    &_all {
+    }
+  }
+
+  &__list-item {
+    flex-basis: 100%;
+  }
+
+  &__list-item-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__list-item-label {
+    position: absolute;
+    z-index: 1;
+    top: 13px;
+    left: 0;
+    padding: 8px 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.64px;
+  }
+
+  &__list-item-active {
+    .collections__list-item-label {
+      background: #a8573e;
+    }
+    &.bordered {
+      .collections__list-item-img {
+        border: 1px solid #d3d3d3;
+      }
+    }
+    @media (any-hover: hover) {
+      img {
+        transition: transform $transition;
+      }
+      a:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__list-item-inactive {
+    img {
+      filter: blur(3px);
+    }
+    .collections__list-item-label {
+      background: #a0a0a0;
+    }
+  }
+
+  &__list-item-coming {
+    img {
+      filter: blur(2.5px);
+    }
+    .collections__list-item-label {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 22px 0;
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+      background: rgba(137, 137, 137, 0.65);
+    }
+  }
+
+  &__list-item-img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+    margin-bottom: 18px;
+  }
+
+  &__list-item-title {
+    color: #646464;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+
+  &__list-item-desc {
+    color: #bdbdbd;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.64px;
+  }
+
+  @media (min-width: $desktopSizeM) {
+    & {
+      padding-top: 178px;
+      padding-bottom: 98px;
+    }
+    &__content {
+    }
+
+    &__head {
+      flex-direction: row;
+      gap: 124px;
+      margin-bottom: 88px;
+    }
+
+    &__title {
+      font-size: 100px;
+    }
+
+    &__nav {
+      align-items: start;
+    }
+
+    &__nav-li {
+    }
+
+    &__nav-button {
+      font-size: 26px;
+      &.active {
+        color: var(--black);
+        &::before {
+          position: absolute;
+          left: -55px;
+          width: 45px;
+          height: 15px;
+          background-size: 100%;
+          background-image: url("data:image/svg+xml,%3Csvg width='45' height='16' viewBox='0 0 45 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM44.7071 8.70711C45.0976 8.31658 45.0976 7.68342 44.7071 7.29289L38.3431 0.928932C37.9526 0.538408 37.3195 0.538408 36.9289 0.928932C36.5384 1.31946 36.5384 1.95262 36.9289 2.34315L42.5858 8L36.9289 13.6569C36.5384 14.0474 36.5384 14.6805 36.9289 15.0711C37.3195 15.4616 37.9526 15.4616 38.3431 15.0711L44.7071 8.70711ZM1 9H44V7H1V9Z' fill='black'/%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+
+    &__list-container {
+    }
+
+    &__list {
+      margin: 0 --17px;
+      row-gap: 98px;
+      &_all {
+      }
+    }
+
+    &__list-item {
+      padding: 0 17px;
+      flex-basis: 33.333333%;
+    }
+
+    &__list-item-active {
+    }
+
+    &__list-item-body {
+    }
+
+    &__list-item-label {
+      top: 45px;
+      padding: 8px 20px;
+      font-size: 20px;
+    }
+
+    &__list-item-img {
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    &__list-item-title {
+      font-size: 22px;
+      margin-bottom: 9px;
+    }
+
+    &__list-item-desc {
+      font-size: 18px;
+      letter-spacing: 0.96px;
+    }
+
+    &__list-item-inactive {
+    }
+
+    &__list-item-coming {
+    }
+
+    &__list-item-active {
+      .collections__list-item-label {
+      }
+    }
+
+    &__list-item-inactive {
+      .collections__list-item-label {
+      }
+    }
+
+    &__list-item-coming {
+      .collections__list-item-label {
+      }
+    }
+  }
+
+  @media (min-width: $desktopSizeL) {
+    &__list-item-title {
+      font-size: 28px;
+      margin-bottom: 9px;
+    }
+
+    &__list-item-desc {
+      font-size: 22px;
+      letter-spacing: 0.96px;
+    }
+  }
+
+  @media (min-width: $desktopSizeXL) {
+    & {
+      padding-top: 278px;
+    }
+    &__list-item-title {
+      font-size: 32px;
+      margin-bottom: 9px;
+    }
+
+    &__list-item-desc {
+      font-size: 24px;
+      letter-spacing: 0.96px;
+    }
+    &__list-item-label {
+      top: 45px;
+      padding: 10px 38px;
+      font-size: 24px;
+    }
+  }
+}
+.container {
+}

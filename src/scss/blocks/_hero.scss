@@ -1,0 +1,149 @@
+.hero {
+  height: 100vh;
+  color: var(--white);
+  position: relative;
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--black);
+    z-index: -1;
+    video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: var(--font-accent);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 20px;
+    span:nth-child(3) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__animation {
+    color: #a8573e;
+    font-family: var(--font-accent);
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-align: center;
+    &:after {
+      content: "авторського";
+      animation: spin 4s linear infinite;
+    }
+  }
+
+  &__desc {
+    color: #bdbdb2;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  @media (min-width: $desktopSizeM) {
+    &__content {
+      align-items: start;
+    }
+    &__title {
+      font-size: 100px;
+      text-align: left;
+      column-gap: 20px;
+      justify-content: start;
+      span:nth-child(1) {
+        flex-basis: 100%;
+      }
+      span:nth-child(2),
+      span:last-child {
+        flex-basis: unset;
+      }
+    }
+    &__desc {
+      font-size: 32px;
+    }
+    &__animation {
+      font-size: 100px;
+    }
+  }
+
+  @media (min-width: $desktopSizeL) {
+  }
+
+  @media (min-width: $desktopSizeXL) {
+  }
+}
+
+@keyframes spin {
+  33% {
+    content: "сміливого";
+  }
+  66% {
+    content: "лімітованого";
+  }
+}
+
+.scroll-downs {
+  width: 34px;
+  height: 55px;
+  position: absolute;
+  right: 0;
+  bottom: 35px;
+  left: 0;
+  margin: auto;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}

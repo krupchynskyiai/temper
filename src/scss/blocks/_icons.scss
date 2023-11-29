@@ -1,0 +1,12 @@
+.icon {
+  flex-shrink: 0;
+  pointer-events: none;
+  touch-action: none;
+  width: var(--size);
+  height: var(--size);
+
+  &.social {
+    --size: 26px;
+  }
+  
+}

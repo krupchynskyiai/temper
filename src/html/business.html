@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	@@include('blocks/meta.html')
+	@@include('blocks/fonts.html')
+</head>
+
+<body class="business">
+	@@include('blocks/svgSprite.html')
+
+	@@include('blocks/header.html', {
+	active: 'business',
+	})
+	<div class="main">
+		@@include('blocks/businessHero.html')
+		@@include('blocks/faq.html')
+		@@include('blocks/businessVariants.html')
+
+		@@include('blocks/form.html')
+
+	</div>
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

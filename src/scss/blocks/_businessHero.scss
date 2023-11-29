@@ -1,0 +1,71 @@
+.businessHero {
+  height: 100vh;
+  background-image: url("/img/business/1-s.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @supports (
+    background-image: -webkit-image-set(url("/img/business/1-s.webp") 1x)
+  ) {
+    & {
+      background-image: -webkit-image-set(url("/img/business/1-s.webp") 1x);
+    }
+  }
+  &__content {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    color: var(--white);
+    text-align: center;
+    font-style: normal;
+  }
+
+  &__title {
+    font-family: var(--font-accent);
+    font-size: 42px;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  &__desc {
+    font-family: Mariupol;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 110.732%; /* 17.717px */
+  }
+
+  @media (min-width: $desktopSizeM) {
+    & {
+      background-image: url("/img/business/1-l.jpg");
+      @supports (
+        background-image: -webkit-image-set(url("/img/business/1-l.webp") 1x)
+      ) {
+        & {
+          background-image: -webkit-image-set(url("/img/business/1-l.webp") 1x);
+        }
+      }
+    }
+    &__content {
+      padding-bottom: 140px;
+      align-items: start;
+      text-align: left;
+    }
+    &__title {
+      font-size: 90px;
+    }
+    &__desc {
+      max-width: 821px;
+      font-size: 28px;
+    }
+  }
+
+  @media (min-width: $desktopSizeL) {
+    &__title {
+      font-size: 100px;
+    }
+  }
+
+  @media (min-width: $desktopSizeXL) {
+  }
+}

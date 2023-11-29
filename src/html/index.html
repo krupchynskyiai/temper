@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	@@include('blocks/meta.html')
+	@@include('blocks/fonts.html')
+</head>
+
+<body>
+	<div class="home">
+		@@include('blocks/svgSprite.html')
+
+		@@include('blocks/header.html', {
+		active: '',
+		})
+		<div class="main">
+			@@include('blocks/hero.html')
+			@@include('blocks/about.html')
+			@@include('blocks/form.html')
+			@@include('blocks/advantages.html')
+			@@include('blocks/temperament.html')
+
+		</div>
+		@@include('blocks/footer.html')
+	</div>
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

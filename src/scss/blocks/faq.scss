@@ -1,0 +1,145 @@
+.faq {
+  padding: 30px 0;
+  &__content {
+    color: var(--black);
+    text-align: center;
+  }
+
+  &__title {
+    font-family: var(--font-accent);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  &__sub-title {
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__li {
+    text-align: left;
+  }
+
+  &__btn {
+    width: 100%;
+    background: #f1f1f1;
+    color: #a8573e;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    position: relative;
+    padding: 16px 16px 16px 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &::after {
+      content: "+";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      border: 1px solid #a8573e;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+    }
+
+    &.open {
+      &::after {
+        content: "-";
+      }
+      & + .faq__answer {
+        grid-template-rows: 1fr;
+        padding-bottom: 8px;
+      }
+    }
+  }
+
+  &__answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows $transition, padding $transition;
+    background: #f1f1f1;
+    padding-left: 8px;
+    padding-right: 16px;
+  }
+
+  &__answer-inner {
+    overflow: hidden;
+  }
+
+  @media (min-width: $desktopSizeM) {
+    & {
+      padding: 88px 0 100px 0;
+    }
+    &__content {
+      text-align: left;
+    }
+
+    &__title {
+      font-size: 48px;
+    }
+
+    &__desc {
+      font-size: 28px;
+      gap: 32px;
+      margin-bottom: 100px;
+    }
+
+    &__sub-title {
+    }
+
+    &__list {
+    }
+
+    &__li {
+    }
+
+    &__btn {
+      font-size: 28px;
+      padding: 22px 18px;
+      &.open {
+        + .faq__answer {
+          padding-bottom: 22px;
+        }
+      }
+    }
+
+    &__answer {
+      font-size: 28px;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    &__answer-inner {
+    }
+  }
+
+  @media (min-width: $desktopSizeL) {
+  }
+
+  @media (min-width: $desktopSizeXL) {
+  }
+}
+.container {
+}

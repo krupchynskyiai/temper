@@ -1,0 +1,22 @@
+.logo {
+  font-size: 32px;
+  display: block;
+  width: fit-content;
+  transition: transform $transition;
+  @media (any-hover: hover) {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  @media (min-width: $tabletSize) {
+  }
+
+  @media (min-width: $desktopSizeM) {
+  }
+
+  @media (min-width: $desktopSizeL) {
+  }
+
+  @media (min-width: $desktopSizeXL) {
+  }
+}
